@@ -72,7 +72,7 @@ body {
 }
 
 .more-active {
-  height: auto;
+  max-height: 100% !important;
 }
 
 .wrapper-outer {
@@ -312,7 +312,6 @@ body {
       &--time-box {
         @media (min-width: $breakpoint-xl-min) {
           display: flex;
-          align-items: center;
         }
       }
 
@@ -374,6 +373,7 @@ body {
       color: $color-dark-half-2;
       border-radius: 11px;
       text-decoration: none;
+      cursor: pointer;
 
       @media (min-width: $breakpoint-xl-min) {
         font-size: 16px;
