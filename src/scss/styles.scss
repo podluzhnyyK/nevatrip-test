@@ -82,7 +82,7 @@ body {
 }
 
 .container {
-  max-width: 1070px;
+  max-width: 1105px;
   margin: 0 auto;
 }
 
@@ -115,16 +115,30 @@ body {
     width: 100%;
     gap: 58px;
   }
+
+  &--xl-hidden {
+    @media (min-width: $breakpoint-xl-min) {
+      display: none;
+    }
+  }
 }
 
 .offer {
   max-width: 342px;
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @media (min-width: $breakpoint-md-min) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   @media (min-width: $breakpoint-xl-min) {
     flex-direction: row;
-    max-width: 1170px;
+    max-width: 1123px;
+    justify-content: flex-end;
   }
 
   &__img-wrap {
@@ -241,7 +255,8 @@ body {
     border-top: 0.3px solid $color-dark-light-3;
     border-left: none;
     flex-grow: 1;
-    max-width: 597px;
+    min-width: 597px;
+    max-width: 615px;
   }
 
   &__duration {
@@ -279,6 +294,7 @@ body {
       line-height: 34px;
       margin-top: 0;
       margin-bottom: 13px;
+      padding-right: 27px;
     }
 
     &-link {
@@ -312,6 +328,7 @@ body {
       &--time-box {
         @media (min-width: $breakpoint-xl-min) {
           display: flex;
+          width: 586px;
         }
       }
 
@@ -334,13 +351,13 @@ body {
         @media (min-width: $breakpoint-xl-min) {
           font-size: 18px;
           line-height: 20px;
+          margin-right: 8px;
         }
       }
     }
   }
 
   &__time {
-    @include list-null();
     display: flex;
     flex-wrap: wrap;
     max-height: 25px;
@@ -353,7 +370,7 @@ body {
       width: 345px;
     }
 
-    &-item {
+    &-title {
       margin-bottom: 7px;
 
       &:not(:nth-child(4n + 4)) {
@@ -406,7 +423,7 @@ body {
 
 .tile-price {
   @media (min-width: $breakpoint-xl-min) {
-    margin-right: 20px;
+    margin-right: 11px;
   }
 
   &-small {
